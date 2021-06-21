@@ -1,5 +1,10 @@
 <template>
-  <v-breadcrumbs class="justify-center" :items="items" divider="|"></v-breadcrumbs>
+  <v-breadcrumbs
+    class="justify-center"
+    :items="items"
+    divider="|"
+    large="true">
+  </v-breadcrumbs>
 </template>
 
 <script>
