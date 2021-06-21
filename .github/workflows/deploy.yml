@@ -1,0 +1,32 @@
+name: Deploy to Heroku
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy backend
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          appdir: backend
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: igs-roti-backend
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          usedocker: true
+          docker_build_args: |
+            MONGO_DB_USER
+            MONGO_DB_PASSWORD
+        env:
+          MONGO_DB_USER: ${{ secrets.MONGO_DB_USER }}
+          MONGO_DB_PASSWORD: ${{ secrets.MONGO_DB_PASSWORD }}
+      - name: Deploy frontend
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          appdir: frontend
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: igs-roti
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          usedocker: true

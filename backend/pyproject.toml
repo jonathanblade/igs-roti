@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "igs-roti-backend"
+version = "0.1.0"
+description = ""
+authors = ["Semen Syrovatskiy <mail@syrovatskiy.tk>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.65.2"
+uvicorn = "^0.14.0"
+gunicorn = "^20.1.0"
+python-multipart = "^0.0.5"
+unlzw = "^0.1.1"
+numpy = "^1.20.3"
+matplotlib = "^3.4.2"
+pymongo = {version = "^3.11.4", extras = ["srv"]}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
