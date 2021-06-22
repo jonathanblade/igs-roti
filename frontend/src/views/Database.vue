@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-progress-linear color="primary" :active="isLoading" indeterminate absolute top></v-progress-linear>
-    <h1 class="mb-12">IGS ROTI Maps Database</h1>
+    <h1 class="mb-8">IGS ROTI Maps Database</h1>
     <v-date-picker
       v-model="date"
       first-day-of-week="1"
