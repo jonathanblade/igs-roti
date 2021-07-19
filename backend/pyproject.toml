@@ -13,7 +13,7 @@ python-multipart = "^0.0.5"
 unlzw = "^0.1.1"
 numpy = "^1.21.1"
 matplotlib = "^3.4.2"
-pymongo = {version = "^3.11.4", extras = ["srv"]}
+pymongo = {version = "^3.12.0", extras = ["srv"]}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
