@@ -18,7 +18,7 @@ FROM poetry AS deps
 WORKDIR $DEPS_PATH
 RUN apt-get update && apt-get install -y gcc
 COPY pyproject.toml poetry.lock ./
-RUN poetry install
+RUN poetry install --no-dev
 
 FROM base AS prod
 WORKDIR $APP_HOME

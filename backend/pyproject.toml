@@ -15,6 +15,9 @@ numpy = "^1.21.1"
 matplotlib = "^3.4.2"
 pymongo = {version = "^3.12.0", extras = ["srv"]}
 
+[tool.poetry.dev-dependencies]
+black = "^21.7b0"
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
