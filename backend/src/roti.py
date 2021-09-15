@@ -18,7 +18,7 @@ START_ROTIMAP = "START OF ROTIPOLARMAP"
 END_ROTIMAP = "END OF ROTIPOLARMAP"
 FILE_ENCODING = "cp1252"
 
-MLT = np.linspace(0, 24, 180)
+MLON = np.linspace(0, 360, 180)
 
 
 class ROTIMap:
@@ -77,13 +77,14 @@ class ROTIMap:
         ax = fig.add_subplot(projection="polar")
 
         ax.set_title(self.DATE.strftime("%d %B %Y"))
-        ax.set_xticklabels(["06", "", "12", "", "18", "", "00 MLT", ""])
-        ax.set_rgrids([90, 80, 70, 60, 50], angle=45)
+        ax.set_theta_zero_location("S")
+        ax.set_xticklabels(["00 MLT", "", "06", "", "12", "", "18", ""])
+        ax.set_rgrids([90, 80, 70, 60, 50], angle=135)
         ax.set_rlim(bottom=90, top=50)
 
-        theta, r = np.meshgrid(MLT, self.MLAT)
+        theta, r = np.meshgrid(MLON, self.MLAT)
         cax = ax.contourf(
-            theta,
+            np.deg2rad(theta),
             r,
             self.ROTI,
             levels=np.linspace(0, 1, 51),
