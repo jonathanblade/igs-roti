@@ -24,6 +24,7 @@
       outlined
       dense>
     </v-file-input>
+    <a :class="{ 'd-none': pngData == '' }" :href="pngData" download="ROTI.png">Click to download image</a>
     <v-img :src="pngData"></v-img>
   </div>
 </template>
