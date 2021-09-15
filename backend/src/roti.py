@@ -91,6 +91,7 @@ class ROTIMap:
             cmap="jet",
             vmin=0,
             vmax=1,
+            extend="both",
         )
         cbar = fig.colorbar(
             cax, ticks=np.linspace(0, 1, 6), orientation="horizontal", pad=0.1
