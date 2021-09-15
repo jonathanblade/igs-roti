@@ -9,7 +9,7 @@
       @change="getMap"
       full-width>
     </v-date-picker>
-    <a :class="{ 'd-none': pngData == '' }" :href="pngData" download="ROTI.png">Click to download image</a>
+    <a :class="{ 'd-none': pngData == '' }" :href="pngData" :download="getImageFilename()">Click to download image</a>
     <v-img :src="pngData"></v-img>
   </div>
 </template>
@@ -31,6 +31,9 @@ export default {
     await this.getMap(this.date);
   },
   methods: {
+    getImageFilename() {
+      return `ROTI-${this.date}.png`
+    },
     getAllowedDates(date) {
       for (var i = 0; i < this.allowedDates.length; i++) {
         if (this.allowedDates[i] == date) {
@@ -53,7 +56,7 @@ export default {
     },
     async getMap(date) {
       this.isLoading = true;
-      await axios.get('/api/map', {params: { date: date}})
+      await axios.get('/api/map', {params: {date: date}})
       .then((response) => {
         this.pngData = response.data['png_data'];
       })

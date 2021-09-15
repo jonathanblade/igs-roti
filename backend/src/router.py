@@ -23,7 +23,7 @@ async def plot_map(file: UploadFile = File(...)):
   png_data = roti_map.plot()
   if not db.get_map(date):
     db.save_map(date, png_data)
-  return {"png_data": png_data}
+  return {"date": date, "png_data": png_data}
 
 
 @router.get("/dates")

@@ -24,7 +24,7 @@
       outlined
       dense>
     </v-file-input>
-    <a :class="{ 'd-none': pngData == '' }" :href="pngData" download="ROTI.png">Click to download image</a>
+    <a :class="{ 'd-none': pngData == '' }" :href="pngData" :download="getImageFilename()">Click to download image</a>
     <v-img :src="pngData"></v-img>
   </div>
 </template>
@@ -38,9 +38,13 @@ export default {
     isLoading: false,
     errorMessage: '',
     successMessage: '',
-    pngData: ''
+    pngData: '',
+    date: ''
   }),
   methods: {
+    getImageFilename() {
+      return `ROTI-${this.date}.png`
+    },
     async uploadFile(file) {
       this.errorMessage = '';
       this.successMessage = '';
@@ -57,6 +61,7 @@ export default {
         await axios.post('/api/plot-map', body, config)
         .then((response) => {
           this.pngData = response.data.png_data;
+          this.date = response.data.date;
           this.successMessage = 'Done';
         })
         .catch((error) => {
