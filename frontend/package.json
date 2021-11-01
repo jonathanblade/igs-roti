@@ -12,7 +12,7 @@
     "axios": "^0.24.0",
     "core-js": "^3.19.0",
     "vue": "^2.6.11",
-    "vue-router": "^3.5.2",
+    "vue-router": "^3.5.3",
     "vuetify": "^2.5.10"
   },
   "devDependencies": {
