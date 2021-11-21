@@ -12,7 +12,7 @@ gunicorn = "^20.1.0"
 python-multipart = "^0.0.5"
 unlzw = "^0.1.1"
 numpy = "^1.21.1"
-matplotlib = "^3.4.3"
+matplotlib = "^3.5.0"
 pymongo = {version = "^3.12.1", extras = ["srv"]}
 
 [tool.poetry.dev-dependencies]
