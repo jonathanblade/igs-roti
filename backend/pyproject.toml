@@ -7,7 +7,7 @@ authors = ["Semen Syrovatskiy <mail@syrovatskiy.tk>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 fastapi = "^0.70.1"
-uvicorn = "^0.16.0"
+uvicorn = "^0.17.1"
 gunicorn = "^20.1.0"
 python-multipart = "^0.0.5"
 unlzw = "^0.1.1"
