@@ -11,7 +11,7 @@ uvicorn = "^0.17.5"
 gunicorn = "^20.1.0"
 python-multipart = "^0.0.5"
 unlzw = "^0.1.1"
-numpy = "^1.22.1"
+numpy = "^1.22.2"
 matplotlib = "^3.5.1"
 pymongo = {version = "^4.0", extras = ["srv"]}
 
