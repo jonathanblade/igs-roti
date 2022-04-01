@@ -103,7 +103,7 @@ IDNA = ["idna (>=2.1)"]
 
 [[package]]
 name = "fastapi"
-version = "0.74.1"
+version = "0.75.0"
 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
 category = "main"
 optional = false
@@ -416,7 +416,7 @@ standard = ["websockets (>=10.0)", "httptools (>=0.2.0,<0.4.0)", "watchgod (>=0.
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "62d2c6fc17e9c08263d22eb0e0bb9b3da8b7e6c4d89fe4c04a8d7e672a7c38a2"
+content-hash = "a575ba2386a55a108cc5172bade9ba7d620327b1a9962f2eb04a87b85fc133b1"
 
 [metadata.files]
 anyio = [
@@ -520,8 +520,8 @@ dnspython = [
     {file = "dnspython-1.16.0.zip", hash = "sha256:36c5e8e38d4369a08b6780b7f27d790a292b2b08eea01607865bf0936c558e01"},
 ]
 fastapi = [
-    {file = "fastapi-0.74.1-py3-none-any.whl", hash = "sha256:b8ec8400623ef0b2ff558ebe06753b349f8e3a5dd38afea650800f2644ddba34"},
-    {file = "fastapi-0.74.1.tar.gz", hash = "sha256:b58a2c46df14f62ebe6f24a9439927539ba1959b9be55ba0e2f516a683e5b9d4"},
+    {file = "fastapi-0.75.0-py3-none-any.whl", hash = "sha256:43d12891b78fc497a50623e9c7c24640c569489f060acd9ce2c4902080487a93"},
+    {file = "fastapi-0.75.0.tar.gz", hash = "sha256:124774ce4cb3322841965f559669b233a0b8d343ea24fdd8b293253c077220d7"},
 ]
 fonttools = [
     {file = "fonttools-4.28.1-py3-none-any.whl", hash = "sha256:68071406009e7ef6a5fdcd85d95975cd6963867bb226f2b786bfffe15d1959ef"},
